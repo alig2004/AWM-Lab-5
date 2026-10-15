@@ -34,7 +34,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 2000px) {
+@media (max-width: 330px) {
     .control-panel {
         width: 90%;
         right: 5%;

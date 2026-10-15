@@ -317,6 +317,10 @@ function showProximityResults(cities, heading) {
     cities.forEach((city) => {
         const item = document.createElement('li');
         item.textContent = `${city.name}, ${city.country} — ${city.distance_km} km`;
+        item.onclick = function() {
+            map.setView((city.coordinates.lat, city.coordinates.lng), Math.max(map.getZoom(), 7), {animate: false});
+            markers[city.id].openPopup();
+        };
         list.append(item);
     });
     results.append(list);
